@@ -631,7 +631,7 @@ namespace HelpDesk.iOS
 
 		// -(void)addDelegate:(id<HDCallManagerDelegate>)aDelegate delegateQueue:(dispatch_queue_t)aQueue;
 		[Export ("addDelegate:delegateQueue:")]
-		void AddDelegate (HDCallManagerDelegate aDelegate, DispatchQueue aQueue);
+		void AddDelegate (HDCallManagerDelegate aDelegate, [NullAllowed] DispatchQueue aQueue);
 
 		// -(void)removeDelegate:(id<HDCallManagerDelegate>)aDelegate;
 		[Export ("removeDelegate:")]
@@ -907,7 +907,7 @@ namespace HelpDesk.iOS
 
 		// -(void)addDelegate:(id<HDChatManagerDelegate>)aDelegate delegateQueue:(dispatch_queue_t)aQueue;
 		[Export ("addDelegate:delegateQueue:")]
-		void AddDelegate (HDChatManagerDelegate aDelegate, DispatchQueue aQueue);
+		void AddDelegate (HDChatManagerDelegate aDelegate, [NullAllowed] DispatchQueue aQueue);
 
 		// -(void)removeDelegate:(id<HDChatManagerDelegate>)aDelegate;
 		[Export ("removeDelegate:")]
@@ -1418,7 +1418,7 @@ namespace HelpDesk.iOS
 
 		// -(void)addDelegate:(id<HDClientDelegate>)aDelegate delegateQueue:(dispatch_queue_t)aQueue;
 		[Export ("addDelegate:delegateQueue:")]
-		void AddDelegate (HDClientDelegate aDelegate, DispatchQueue aQueue);
+		void AddDelegate (HDClientDelegate aDelegate, [NullAllowed] DispatchQueue aQueue);
 
 		// -(void)removeDelegate:(id<HDClientDelegate>)aDelegate;
 		[Export ("removeDelegate:")]

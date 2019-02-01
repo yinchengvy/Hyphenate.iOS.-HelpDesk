@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.props" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -9,6 +10,19 @@
     <RootNamespace>HelpDesk.iOS</RootNamespace>
     <AssemblyName>HelpDesk.iOS</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <PackOnBuild>true</PackOnBuild>
+    <PackageId>HelpDesk.iOS</PackageId>
+    <PackageVersion>1.2.1</PackageVersion>
+    <Authors>YinCheng</Authors>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <Owners>YinCheng</Owners>
+    <PackageProjectUrl>https://github.com/yinchengvy/Hyphenate.iOS.HelpDesk.git</PackageProjectUrl>
+    <PackageReleaseNotes>绑定环信客服SDK iOS版，HelpDesk.framework
+package: Hyphenate.framework 3.5.2
+Version: 1.2.1</PackageReleaseNotes>
+    <PackageTags>Xamarin.iOS HelpDesk Hyphenate</PackageTags>
+    <Title>HelpDesk.iOS</Title>
+    <Description>绑定环信客服SDK iOS版本 HelpDesk.framework</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -53,4 +67,5 @@
     <BundleResource Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
+  <Import Project="..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.targets')" />
 </Project>
