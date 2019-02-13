@@ -168,4 +168,17 @@ namespace HelpDesk.iOS
 		ToCustomServiceMsg,
 		BigExpressionMsg
 	}
+
+    public static class DefineConstants
+    {
+        // HDPushOptions.h
+        public static readonly string PushNickname = "nickname";
+        public static readonly string PushDisplayStyle = "notification_display_style";
+        public static readonly string PushNoDisturbing = "notification_no_disturbing";
+        public static readonly string PushNoDisturbingStartH = "notification_no_disturbing_start";
+        public static readonly string PushNoDisturbingStartM = "notification_no_disturbing_startM";
+        public static readonly string PushNoDisturbingEndH = "notification_no_disturbing_end";
+        public static readonly string PushNoDisturbingEndM = "notification_no_disturbing_endM";
+
+    }
 }

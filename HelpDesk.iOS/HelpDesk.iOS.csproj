@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.props" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.props')" />
+  <Import Project="..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.props" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -12,7 +12,7 @@
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>HelpDesk.iOS</PackageId>
-    <PackageVersion>1.2.1</PackageVersion>
+    <PackageVersion>1.2.1.1</PackageVersion>
     <Authors>YinCheng</Authors>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <Owners>YinCheng</Owners>
@@ -22,7 +22,7 @@ package: Hyphenate.framework 3.5.2
 Version: 1.2.1</PackageReleaseNotes>
     <PackageTags>Xamarin.iOS HelpDesk Hyphenate</PackageTags>
     <Title>HelpDesk.iOS</Title>
-    <Description>绑定环信客服SDK iOS版本 HelpDesk.framework</Description>
+    <Description>绑定环信客服SDK iOS版本 HelpDesk.framework 1.2.1(1)</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,7 +45,7 @@ Version: 1.2.1</PackageReleaseNotes>
     <Reference Include="System" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="Hyphenate.iOS">
-      <HintPath>..\packages\Hyphenate.iOS.Lib.3.5.2\lib\xamarinios10\Hyphenate.iOS.dll</HintPath>
+      <HintPath>..\packages\Hyphenate.iOS.Lib.3.5.2.1\lib\xamarinios10\Hyphenate.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -67,5 +67,5 @@ Version: 1.2.1</PackageReleaseNotes>
     <BundleResource Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
-  <Import Project="..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.targets')" />
+  <Import Project="..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets')" />
 </Project>
